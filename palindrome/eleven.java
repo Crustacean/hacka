@@ -1,8 +1,8 @@
 import java.util.*;
 import java.text.*;
 import java.math.*;
+import java.lang.*;
 import java.util.regex.*;
-import java.lang.*; 
 
 class eleven {
   
@@ -44,19 +44,24 @@ static int primePalindrome(int N)
     return -1; 
 }
   
-// Driver code1
+// Driver1
 /*public static void main(String args[]) 
 { 
     System.out.print(primePalindrome(56)); 
   
 } */
 
-//Driver code2
+//Driver2
 public static void main (String [] args) {
 		Scanner in = new Scanner(System.in);
 		System.out.print("Please enter a number and press Enter key: ");
-        int palin = in.nextInt();
-		System.out.print(primePalindrome(palin));
+		
+		try {
+			int palin = in.nextInt();
+			System.out.print(primePalindrome(palin));
+		} catch (Exception e) {
+			System.out.println("Something went wrong.");
+		}
 }
 
 
